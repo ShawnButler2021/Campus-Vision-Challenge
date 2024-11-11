@@ -1,6 +1,6 @@
 # Campus Vision Model
 
-This repository contains the `Campus Vision Model`, a deep learning project built with PyTorch, to classify buildings on a university campus based on images. This project utilizes a pre-trained ResNet50 model, fine-tuned on custom building data, and was trained with the assistance of RoboFlow for dataset preparation. The training and testing scripts are designed to facilitate ease of training, model evaluation, and predictions.
+This repository contains the `Campus Vision Model`, a deep learning project built with PyTorch, to classify buildings on the Mississippi State University campus based on images. This project utilizes a pre-trained ResNet50 model, fine-tuned on custom building data, and was trained with the assistance of RoboFlow for dataset preparation. The training and testing scripts are designed to facilitate ease of training, model evaluation, and predictions.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -22,7 +22,7 @@ This repository contains the `Campus Vision Model`, a deep learning project buil
 ---
 
 ## Overview
-The Campus Vision Model identifies specific buildings on a university campus. This model was built using PyTorch and leverages transfer learning with the ResNet50 architecture, which was fine-tuned on a custom dataset of building images. The project demonstrates the use of mixed precision for faster training on GPU and early stopping to prevent overfitting.
+The Campus Vision Model identifies specific buildings on the Mississippi State University campus. This model was built using PyTorch and leverages transfer learning with the ResNet50 architecture, which was fine-tuned on a custom dataset of building images. The project demonstrates the use of mixed precision for faster training on GPU and early stopping to prevent overfitting.
 
 ## Dataset
 The dataset consists of labeled images of campus buildings, organized into folders for each building class. The dataset was processed and augmented using RoboFlow, which allowed for resizing, rotation, and color transformations to improve model robustness.
