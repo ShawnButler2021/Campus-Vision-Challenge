@@ -1,0 +1,14 @@
+dependencies used in the project:
+
+torch
+torchvision
+pillow
+roboflow
+matplotlib
+seaborn
+scikit-learn
+
+If you need specific versions for each package, you can run the following command in your project environment to generate a more detailed requirements.txt file with exact versions:
+
+bash:
+pip freeze > requirements.txt
