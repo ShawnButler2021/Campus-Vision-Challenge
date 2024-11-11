@@ -23,6 +23,10 @@ This repository contains the `Campus Vision Model`, a deep learning project buil
 
 ## Overview
 The Campus Vision Model identifies specific buildings on the Mississippi State University campus. This model was built using PyTorch and leverages transfer learning with the ResNet50 architecture, which was fine-tuned on a custom dataset of building images. The project demonstrates the use of mixed precision for faster training on GPU and early stopping to prevent overfitting.
+Our team (Team 2) consisted of the following members:
+* Sydney Whitfield
+* Mohnish Sao
+* Shawn Butler
 
 ## Dataset
 The dataset consists of labeled images of campus buildings, organized into folders for each building class. The dataset was processed and augmented using RoboFlow, which allowed for resizing, rotation, and color transformations to improve model robustness.
