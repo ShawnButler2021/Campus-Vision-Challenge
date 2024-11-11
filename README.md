@@ -97,3 +97,14 @@ The model uses automatic mixed precision (`torch.amp`) to speed up training on c
 To train the model, run:
 ```bash
 python finalcampusvisionmodel.py
+
+## Evaluation
+After training, the model is evaluated on a validation set with the following metrics:
+
+- **Accuracy**: Measures the proportion of correctly classified instances.
+- **Precision**: Indicates the accuracy of positive predictions.
+- **Recall**: Represents the model's ability to find all positive instances.
+- **F1 Score**: A balanced measure between precision and recall.
+- **Log Loss**: Measures the performance of the classification model based on probability estimates.
+
+These metrics help in understanding the model's performance and reliability.
