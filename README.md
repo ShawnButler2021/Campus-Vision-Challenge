@@ -18,7 +18,6 @@ This repository contains the `Campus Vision Model`, a deep learning project buil
 - [Plots](#plots)
   - [Plot Examples](#plot-examples)
 - [Results](#results)
-- [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -97,7 +96,7 @@ The model uses automatic mixed precision (`torch.amp`) to speed up training on c
 To train the model, run:
 ```bash
 python finalcampusvisionmodel.py
-
+```
 ## Evaluation
 After training, the model is evaluated on a validation set with the following metrics:
 
@@ -108,3 +107,51 @@ After training, the model is evaluated on a validation set with the following me
 - **Log Loss**: Measures the performance of the classification model based on probability estimates.
 
 These metrics help in understanding the model's performance and reliability.
+
+## Validation Process
+Validation is performed after each epoch. The script also saves the best model based on the lowest validation loss, helping to avoid overfitting and ensuring the model's robustness on unseen data.
+
+## Inference
+The `campusvision_testing.py` script provides functions for loading the model and performing predictions. This script can be used to test the model on new data and obtain prediction results.
+
+### Predicting for a Single Image
+To predict a single image, use the following code snippet:
+
+```python
+from campusvision_testing import predict
+
+predict(model, "path/to/image.jpg", class_to_building)
+```
+
+# Batch Prediction for Folder
+
+To predict all images in a folder:
+
+```python
+from campusvision_testing import predict_folder
+predict_folder(model, "/content/test_images", class_to_building)
+```
+
+# Plots
+
+The `TrainPlot.py` script visualizes the training and validation loss and accuracy over epochs.
+
+```bash
+python TrainPlot.py
+```
+
+# Plot Examples
+
+- **Train vs. Validation Loss**: Useful to understand model convergence and overfitting.
+
+- **Train vs. Validation Accuracy**: Helps visualize the accuracy improvements across epochs.
+
+# Results
+
+After training, the best model achieved the following performance metrics:
+
+- **Best Validation Accuracy**: ~97%
+- **Best F1 Score**: ~0.97
+- **Best Log Loss**: ~0.11
+
+These metrics indicate that the model performs well in classifying the campus buildings, with high precision and low misclassification.
